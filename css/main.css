@@ -1669,6 +1669,10 @@ input.num-product::-webkit-inner-spin-button {
 	padding-bottom: 9px;
 }
 
+form{
+	padding-top: 10px;
+}
+
 #footer-items {
 	display: flex;
 	align-items: center;
@@ -1722,9 +1726,6 @@ button[type=submit]{
 }
 
 .main-title{
-	background-image: url(images/icons/heading-pages-01.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
 	padding-top: 20px;
 	padding-bottom: 15px;
 }

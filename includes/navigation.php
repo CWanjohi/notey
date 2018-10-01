@@ -20,8 +20,17 @@
 
 			<!-- Header Icon -->
 			<div class="header-icons">
-				<span class="topbar-email">user@example.com</span>
+				<?php if (!isLoggedIn()): ?>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="login.php">Log In</a></li>
+					<li><a href="register.php">Sign Up</a></li>
+				</ul>
+				<?php else:?>
+					<span class="topbar-email">user@example.com</span>
+				<?php endif;?>
+
 				<img src="images/icons/icon-header-01.png" class="header-icon1" alt="icon">
+				
 				<span class="linedivide1"></span>
 
 				<div class="header-wrapicon2">

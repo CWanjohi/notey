@@ -1,5 +1,5 @@
-<? php
-	$mysql= new mysqli("localhost","root","");
-	mysql_connect("localhost","root","");
+<?php
+
+$db = mysqli_connect("localhost", "root","", "notey");
 
 ?>

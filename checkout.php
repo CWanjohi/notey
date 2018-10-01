@@ -25,7 +25,7 @@
 					<span>Total: </span><span><?=money(30);?></span>
 				</div>
 				<div>
-					<a href="process/process_order.php" class="btn cart-button"><i class="fa fa-cart-plus"></i> Place Order</a>
+					<a href="process_order.php" class="btn cart-button"><i class="fa fa-cart-plus"></i> Place Order</a>
 				</div>
 			</div>
 		</div>
