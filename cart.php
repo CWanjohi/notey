@@ -29,7 +29,7 @@
 									<img src="images/products/notebooks/notebook1.jpg" alt="img-product">
 								</div>
 							</td>
-							<td><a href="process/process_seeDetails.php">Notebook 1</a></td>
+							<td><a href="process_seeDetails.php">Notebook 1</a></td>
 							<td><?=money(35);?></td>
 							<td>
 								<div class="flex-w bo5 w-size17">
@@ -39,7 +39,7 @@
 							<td><?=money(35);?></td>
 							<td id="cart-table-btn-column">
 								<a href="cart.php" class="btn cart-button cart-table-buttons"><i class="fa fa-pencil"></i></a>
-								<a href="#" class="btn cart-button cart-table-buttons"><i class="fa fa-remove"></i></a>
+								<a href="process_delete.php" class="btn cart-button cart-table-buttons"><i class="fa fa-remove"></i></a>
 							</td>
 						</tr>
 					<?php endfor;?>

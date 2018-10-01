@@ -22,7 +22,9 @@
 				
 		<title>Notey</title>
 	</head>
+	<!-- loading bar 
 	<div class="progress" id="progress" style="height: 1.5px;">
 	  <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 	</div>
+	-->
 	<body>

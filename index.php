@@ -22,13 +22,13 @@
 								<img src="images/products/notebooks/notebook1.jpg" alt="img-product">
 								<div>
 									<button class="add-cart-btn">
-										<a href="process/process_cart.php">Add to Cart</a>
+										<a href="process_cart.php">Add to Cart</a>
 									</button>
 								</div>
 							</div>
 
 							<div class="">
-								<a href="process/process_seeDetails.php" class="">Notebook 1</a>
+								<a href="process_seeDetails.php" class="">Notebook 1</a>
 							</div>
 							<div>
 								<span class="">

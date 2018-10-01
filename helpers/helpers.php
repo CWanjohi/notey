@@ -35,8 +35,9 @@
 	function isLoggedIn(){
 		if (isset($_SESSION['SBUser']) && $_SESSION['SBUser'] > 0) {
 			return true;
-		}
+		}else{
 		return false;
+		}
 	}
 
 	function loginErrorRedirect($url='login.php'){
