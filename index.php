@@ -5,7 +5,7 @@
 ?>
 		<!--Splash page(about)-->
 		<section class="landing-page">
-			<p>CCccccffguugi</p>
+			<p>Collins</p>
 		</section>
 
 		<!--featured products-->
