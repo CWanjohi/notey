@@ -5,32 +5,35 @@
 ?>
 		<section class="featured">	
 			<div class="main-title text-center">
-				<h3>Shop</h3>
+				<h3>The Shop</h3>
 			</div>
 
 			<div class="container">
 				<div class="row">
-					<?php for ($i=0; $i < 8; $i++) :?>
-						<div class="col-md-3">
+					<?php
+						include "connect.php";
+						$sql = "SELECT * FROM `products` where featured = 'y'";
+						$result = mysqli_query($db,$sql);
+ 						while ($row = mysqli_fetch_array($result)) :?>
+							<div class="col-md-3">
 							<div class="product-display">
-								<img src="images/products/notebooks/notebook1.jpg" alt="img-product">
+								<img src="images/products/<?=$row['image'];?>" alt="product-img">
 								<div>
+									<p><?=$row["title"];?></p>
 									<button class="add-cart-btn">
-										<a href="process_cart.php">Add to Cart</a>
+										<a href="process_cart.php?id='<?=$row['id'];?>'">Add to Cart</a>
 									</button>
 								</div>
 							</div>
 
-							<div class="">
-								<a href="process_seeDetails.php" class="">Notebook 1</a>
+							<div>
+								<a href="process_seeDetails.php?id='<?=$row['id'];?>'">See Details</a>
 							</div>
 							<div>
-								<span class="">
-									<?=money(500);?> <del><?=money(600);?></del>
-								</span>
+								<span><?=money($row["list_price"]);?> <del><?=money($row["unit_price"]);?></del></span>
 							</div>
 						</div>
-					<?php endfor;?>
+						<?php endwhile;?>
 				</div>
 			</div>
 		</section>
