@@ -8,22 +8,16 @@ $id = $_GET['id'];
 
 $sql = "SELECT * FROM products WHERE id = '$id'";
 $result = mysqli_query($db,$sql);
-
-while ($row = mysqli_fetch_array($result))
-{
+$row = mysqli_fetch_array($result);
+while ($row){
 	$email = $_SESSION['email'];
-    $title = $row['title'];
-    $image = $row['image'];
-    $price = $row['price'];
+  $title = $row['title'];
+  $image = $row['image'];
+  $price = $row['list_price'];
 
-
-
-    $sql3 = "INSERT INTO `cart` (`id`, `image`, `title`, `price`, `quantity`, `buyer`) VALUES (NULL, '$image', '$title', '$price', '1', '$email')";
-    $result2 = mysqli_query($db,$sql3);
-
-    echo "<script type='text/javascript'>window.alert('Product have been added to your cart successfully')</script>";
-    echo "<script>window.location.href ='cart.php'</script>";
-//    header("location:cart.php");
-
+  $sql3 = "INSERT INTO `cart` (`image`, `title`, `price`, `quantity`, `buyer`) VALUES ('$image', '$title', '$price', '1', '$email')";
+  $result2 = mysqli_query($db,$sql3);
+  echo "<script type='text/javascript'>window.alert('Product has been added to your cart successfully')</script>";
+  echo "<script>window.location.href ='cart.php'</script>";
 }
 ?>

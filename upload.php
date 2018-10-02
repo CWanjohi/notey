@@ -10,11 +10,11 @@
 			<div class="col-md-6">
 				<h2 class="maint-title text-center">Upload Custom Print</h2>
 				<hr>
-				<form class="form-horizontal login-form" role="form" method="post" action="process/process_upload.php" enctype="multipart/form-data">
+				<form class="form-horizontal" id="login-form" role="form" method="post" action="process_upload.php" enctype="multipart/form-data">
 					<div class="form-group">
 						<label class="control-label col-md-4" for="upload">File: </label>
 						<div class="col-md-6">
-							<input class="form-control" name="upload" id="upload" type="file" name="fileToUpload" id="fileToUpload" style="padding-bottom: 20px">
+							<input class="form-control" type="file" name="fileToUpload" id="fileToUpload">
 						</div>
 					</div>
 

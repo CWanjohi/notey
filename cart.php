@@ -22,35 +22,39 @@
 					</thead>
 
 					<tbody>
-					<?php for ($i=0; $i < 4; $i++) :?>
+						<?php
+						include "connect.php";
+						$email = $_SESSION['email'];
+						$sql = "SELECT * FROM `cart` WHERE buyer = '$email'";
+						$result = mysqli_query($db,$sql);
+ 						while ($row = mysqli_fetch_array($result)) :?>
 						<tr>
 							<td>
 								<div class="cart-img-product">
-									<img src="images/products/notebooks/notebook1.jpg" alt="img-product">
+									<img src="images/products/<?=$row['image'];?>" alt="img-product">
 								</div>
 							</td>
-							<td><a href="process_seeDetails.php">Notebook 1</a></td>
-							<td><?=money(35);?></td>
+							<td><a href="process_seeDetails.php"><?=$row['title'];?></a></td>
+							<td><?=money($row['price']);?></td>
 							<td>
-								<div class="flex-w bo5 w-size17">
-									<input class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="1">
+								<div>
+									<input class="text-center" type="number" name="num-product1" value="1">
 								</div>
 							</td>
-							<td><?=money(35);?></td>
+							<?php $item_total=($row['price']) * 1;?>
+							<td><?=money($item_total);?></td>
 							<td id="cart-table-btn-column">
 								<a href="cart.php" class="btn cart-button cart-table-buttons"><i class="fa fa-pencil"></i></a>
-								<a href="process_delete.php" class="btn cart-button cart-table-buttons"><i class="fa fa-remove"></i></a>
+								<a href="process_delete.php?id='<?=$row['id'];?>'" class="btn cart-button cart-table-buttons"><i class="fa fa-remove"></i></a>
 							</td>
 						</tr>
-					<?php endfor;?>
-					</tbody>
+					<?php endwhile;?>
+				</tbody>
 				</table>
 			</div>
-			<div class="col-md-12">
-				<div class="col-md-6">
-					<a href="product.php" class="btn cart-button"><i class="fa fa-cart-plus"></i> Add Items</a>
-					<a href="checkout.php" class="btn cart-button"><i class="fa fa-shopping-cart"></i> Checkout</a>
-				</div>
+			<div class="cart-btn-section col-md-6">
+				<a href="product.php" class="btn cart-button"><i class="fa fa-cart-plus"></i> Add Items</a>
+				<a href="checkout.php" class="btn cart-button"><i class="fa fa-shopping-cart"></i> Checkout</a>
 			</div>
 		</div>
 	</div>

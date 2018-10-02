@@ -19,18 +19,15 @@
 
 					<form class="form-horizontal" method="post" role="form" action="process_contact.php">
 						<div class="form-group">
-							<input type="text" name="name" placeholder="Full Name">
+							<label class="control-label">Your Name:* </label>
+							<input type="text" name="name" placeholder="Full Name" required="">
 						</div>
-
 						<div class="form-group">
-							<input type="text" name="phone-number" placeholder="Phone Number">
+							<label class="control-label">Email:* </label>
+							<input type="text" name="email" placeholder="Email Address" required="">
 						</div>
 
-						<div class="form-group">
-							<input type="text" name="email" placeholder="Email Address">
-						</div>
-
-						<textarea class="dis-block" name="message" placeholder="Message"></textarea>
+						<textarea class="dis-block" rows="4" cols="50" name="feedback" placeholder="Message"></textarea>
 
 						<div class="form-group">
 							<button type="submit" name="login" class="btn btn-default">Send</button>
