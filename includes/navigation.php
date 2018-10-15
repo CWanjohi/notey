@@ -12,7 +12,6 @@
 						<li><a href="product.php">Shop</a></li>
 						<li><a href="upload.php">Custom Design</a></li>
 						<li><a href="cart.php">My Cart</a></li>
-						<li><a href="checkout.php">Checkout</a></li>
 						<li><a href="contact.php">Contact Us</a></li>
 					</ul>
 				</nav>
