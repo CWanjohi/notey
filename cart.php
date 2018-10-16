@@ -52,6 +52,7 @@
 				</tbody>
 				</table>
 			</div>
+			<div class="col-md-5"></div>
 			<div class="cart-btn-section col-md-6">
 				<a href="product.php" class="btn cart-button"><i class="fa fa-cart-plus"></i> Add Items</a>
 				<a href="checkout.php" class="btn cart-button"><i class="fa fa-shopping-cart"></i> Checkout</a>
@@ -60,5 +61,18 @@
 	</div>
 </section>
 
+<section>
+	<div class="col-md-11" style="text-align: right;">
+		<h5>Cart Totals</h5>
+		<div>
+			<span>Subtotal: </span><span>$39.00</span>
+		</div>
+
+		<div>
+			<p><strong><?=money(300);?></strong> for nationwide order delivery.</p>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+</section>
 
 <?php include 'includes/footer.php'; ?>

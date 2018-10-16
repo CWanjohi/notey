@@ -13,6 +13,7 @@
 				<div class="row">
 					<?php
 						include "connect.php";
+						$id = $_GET['id'];
 						$sql = "SELECT * FROM `products` where id = '$id'";
 						$result = mysqli_query($db,$sql);
  						while ($row = mysqli_fetch_array($result)) :?>
@@ -20,7 +21,7 @@
 							<div class="product-display">
 								<img src="../notey/images/products/<?=$row['image'];?>" alt="product-img">
 								<div>
-									<p><?=$row["title"];?></p>
+									<p><?=$row['title'];?></p>
 									<button class="add-cart-btn">
 										<a href="process_cart.php?id='<?=$row['id'];?>'">Add to Cart</a>
 									</button>
@@ -31,10 +32,10 @@
 								<a href="process_seeDetails.php?id='<?=$row['id'];?>'">See Details</a>
 							</div>
 							<div>
-								<span><?=money($row["list_price"]);?> <del><?=money($row["unit_price"]);?></del></span>
+								<span><?=money($row['list_price']);?> <del><?=money($row['unit_price']);?></del></span>
 							</div>
 						</div>
-						<?php endwhile;?>
+					<?php endwhile;?>
 				</div>
 			</div>
 		</section>

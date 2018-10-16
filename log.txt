@@ -3,6 +3,6 @@ Require working:
 	see items details page
 	navbar- login and signup
 	process_cart - doesn't work
-	process_upload - check if felds are filled
+	process_upload - check if fields are filled
 	cart - indicate when empty
 	checkout - using dummy data

@@ -12,7 +12,6 @@
 						<li><a href="product.php">Shop</a></li>
 						<li><a href="upload.php">Custom Design</a></li>
 						<li><a href="cart.php">My Cart</a></li>
-						<li><a href="checkout.php">Checkout</a></li>
 						<li><a href="contact.php">Contact Us</a></li>
 					</ul>
 				</nav>
@@ -35,7 +34,7 @@
 						echo "<li><a href='logout.php'><span class='glyphicon glyphicon-log-in'></span> Logout </a></li>";
 					}else{
 						echo "<li><a href='login.php'><span class='glyphicon glyphicon-log-in'></span>Login </a></li>";
-						echo "<li><a href='signup.php'><span class='glyphicon glyphicon-log-in'></span>Sign Up </a></li>";
+						echo "<li><a href='register.php'><span class='glyphicon glyphicon-log-in'></span>Sign Up </a></li>";
 					}
 					?>
 				</ul>
